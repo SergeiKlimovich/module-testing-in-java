@@ -27,5 +27,4 @@ public class DataParser {
         }
         return new Template(splitData[0], values);
     }
-
 }

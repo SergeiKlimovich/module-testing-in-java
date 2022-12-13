@@ -1,2 +1,0 @@
-shouldReadDataFromTemporaryFile(Path) has the following tags [io]. During execution throws exceptions: true. Executed in SAME_THREAD mode
-shouldReadDataFromTemporaryFile(Path) has the following tags [io]. During execution throws exceptions: false. Executed in SAME_THREAD mode

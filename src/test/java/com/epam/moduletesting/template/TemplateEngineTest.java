@@ -45,18 +45,18 @@ class TemplateEngineTest {
         testMap2.put("value", "SubstitutedValue1");
         testMap2.put("value2", "#{tag}");
         HashMap<String, String> testMap3 = new HashMap<String, String>();
-        testMap3.put("value", "SubstitutedValue1");
+        testMap3.put("value", "SubstitutedValue3");
         testMap3.put("value2", "WillNotBePresent");
 
         return Stream.of(Arguments.of("Template 1 has SubstitutedValue. Sent to Address1",
-                        new Template("Template 1 has #{valueSub}",
+                        new Template("Template 1 has #{value}",
                                 testMap1), new Client("Address1")),
                 Arguments.of("Template 2 has SubstitutedValue1 and #{tag}. Sent to Address2",
-                        new Template("Template 2 has #{valueSub} and #{value2}",
+                        new Template("Template 2 has #{value} and #{value2}",
                                 testMap2),
                         new Client("Address2")),
-                Arguments.of("Template 1 has SubstitutedValue. Sent to Address3",
-                        new Template("Template 1 has #{value}",
+                Arguments.of("Template 3 has SubstitutedValue3. Sent to Address3",
+                        new Template("Template 3 has #{value}",
                                 testMap3),
                         new Client("Address3")));
     }
